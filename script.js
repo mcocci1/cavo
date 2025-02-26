@@ -6,6 +6,18 @@ const output2 = document.getElementById('output2');
 const calcolaButton = document.getElementById('calcola');
 const pulisciButton = document.getElementById('pulisci');
 
+input1.addEventListener('input', () => {
+  input1.value = formatNumber(input1.value.replace(/\./g, ''));
+});
+
+input2.addEventListener('input', () => {
+  input2.value = formatNumber(input2.value.replace(/\./g, ''));
+});
+
+input3.addEventListener('input', () => {
+  input3.value = formatNumber(input3.value.replace(/\./g, ''));
+});
+
 calcolaButton.addEventListener('click', () => {
     const num1 = parseFloat(input1.value) || 0;
     const num2 = parseFloat(input2.value) || 0;
@@ -17,8 +29,8 @@ calcolaButton.addEventListener('click', () => {
     const cavoTagliato = Math.abs(num2 - num3);
     const cavoRimasto = num1 - cavoTagliato;
 
-    output1.textContent = `Cavo tagliato: ${cavoTagliato}`;
-    output2.innerHTML = `<strong>Cavo rimasto: ${cavoRimasto}</strong>`;
+    output1.textContent = `Cavo tagliato: ${formatNumber(cavoTagliato)}`;
+	output2.innerHTML = `<strong>Cavo rimasto: ${formatNumber(cavoRimasto)}</strong>`;
 });
 
 pulisciButton.addEventListener('click', () => {
@@ -29,3 +41,7 @@ pulisciButton.addEventListener('click', () => {
     output2.innerHTML = '<strong>Cavo rimasto: 0</strong>';
     input1.focus();
 });
+
+function formatNumber(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
