@@ -32,8 +32,3 @@ pulisciButton.addEventListener('click', () => {
     output2.innerHTML = '<strong>Cavo rimasto: 0</strong>';
     input1.focus();
 });
-
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-}
