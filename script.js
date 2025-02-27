@@ -20,15 +20,15 @@ calcolaButton.addEventListener('click', () => {
     const cavoTagliato = Math.abs(num2 - num3);
     const cavoRimasto = num1 - cavoTagliato;
 
-    output1.textContent = `Cavo tagliato: ${cavoTagliato}`;
-    output2.innerHTML = `<strong>Cavo rimasto: ${cavoRimasto}</strong>`;
+    output1.textContent = `Cavo tagliato m. ${cavoTagliato}`;
+    output2.innerHTML = `<strong>Cavo rimasto m. ${cavoRimasto}</strong>`;
 });
 
 pulisciButton.addEventListener('click', () => {
     input1.value = '';
     input2.value = '';
     input3.value = '';
-    output1.textContent = 'Cavo tagliato: 0';
-    output2.innerHTML = '<strong>Cavo rimasto: 0</strong>';
+    output1.textContent = 'Cavo tagliato m. 0';
+    output2.innerHTML = '<strong>Cavo rimasto m. 0</strong>';
     input1.focus();
 });
