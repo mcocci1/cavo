@@ -6,6 +6,9 @@ const output2 = document.getElementById('output2');
 const calcolaButton = document.getElementById('calcola');
 const pulisciButton = document.getElementById('pulisci');
 
+// Imposta il focus sulla casella input1 all'apertura della pagina
+input1.focus();
+
 calcolaButton.addEventListener('click', () => {
     const num1 = parseFloat(input1.value) || 0;
     const num2 = parseFloat(input2.value) || 0;
@@ -29,3 +32,8 @@ pulisciButton.addEventListener('click', () => {
     output2.innerHTML = '<strong>Cavo rimasto: 0</strong>';
     input1.focus();
 });
+
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
