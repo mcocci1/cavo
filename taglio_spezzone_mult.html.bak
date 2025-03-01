@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Calcolo Taglio Spezzone Multiplo</title>
+    <title>Taglio multiplo spezzone</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -19,8 +19,14 @@
         <input type="text" id="input1" placeholder="Numero spezzoni:" inputmode="numeric" pattern="[0-9]*">
         <input type="text" id="input2" placeholder="Lunghezza spezzone:" inputmode="numeric" pattern="[0-9]*">
         <input type="text" id="input3" placeholder="Marca metrica iniziale:" inputmode="numeric" pattern="[0-9]*">
+		<div class="radio-group">
+            <label><input type="radio" name="direction" value="sale" checked> Sale</label>
+            <label><input type="radio" name="direction" value="scende"> Scende</label>
+        </div>
+        <button id="calcola">Calcola</button>
+        <button id="pulisci">Pulisci</button>
     </div>
-
+    <script src="taglio_spezzone_mult.js"></script>
     <script src="menu.js"></script>
 </body>
 </html>

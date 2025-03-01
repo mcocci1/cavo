@@ -1,6 +1,7 @@
 const input1 = document.getElementById('input1');
 const input2 = document.getElementById('input2');
 const input3 = document.getElementById('input3');
+const radioButtons = document.querySelectorAll('input[name="direction"]');
 const calcolaButton = document.getElementById('calcola');
 const pulisciButton = document.getElementById('pulisci');
 
@@ -22,18 +23,26 @@ calcolaButton.addEventListener('click', () => {
     }
 
     // inserire algoritmo di calcolo
+	const cavoTagliato = num1*num2;
 
-    output1.textContent = `Cavo tagliato m. ${formatNumber(cavoTagliato)}`;
-    output2.innerHTML = `<strong>Cavo rimasto m. ${formatNumber(cavoRimasto)}</strong>`;
+    output1.textContent = `Totale lunghezza cavo m. ${formatNumber(cavoTagliato)}`;
+
 });
 
 pulisciButton.addEventListener('click', () => {
     input1.value = '';
     input2.value = '';
     input3.value = '';
-    output1.textContent = 'Cavo tagliato m. 0';
-    output2.innerHTML = '<strong>Cavo rimasto m. 0</strong>';
+    output1.textContent = 'Totale lunghezza cavo m. 0';
     input1.focus();
+});
+
+
+radioButtons.forEach(radioButton => {
+    radioButton.addEventListener('change', () => {
+        // Esegui la logica di calcolo qui
+        console.log("Selezione cambiata:", document.querySelector('input[name="direction"]:checked').value);
+    });
 });
 
 input1.addEventListener('input', () => {

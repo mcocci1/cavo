@@ -60,6 +60,15 @@ button:hover {
   color: #007bff;
 }
 
+/* Stili per i radio buttons */
+.radio-group {
+    margin-top: 10px;
+}
+
+.radio-group label {
+    margin-right: 10px;
+}
+
 /* Stili per il menu */
 .menu-icon {
     position: absolute;

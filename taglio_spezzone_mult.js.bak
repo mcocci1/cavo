@@ -1,8 +1,6 @@
 const input1 = document.getElementById('input1');
 const input2 = document.getElementById('input2');
 const input3 = document.getElementById('input3');
-const output1 = document.getElementById('output1');
-const output2 = document.getElementById('output2');
 const calcolaButton = document.getElementById('calcola');
 const pulisciButton = document.getElementById('pulisci');
 
@@ -23,8 +21,7 @@ calcolaButton.addEventListener('click', () => {
         return;
     }
 
-    const cavoTagliato = Math.abs(num2 - num3);
-    const cavoRimasto = num1 - cavoTagliato;
+    // inserire algoritmo di calcolo
 
     output1.textContent = `Cavo tagliato m. ${formatNumber(cavoTagliato)}`;
     output2.innerHTML = `<strong>Cavo rimasto m. ${formatNumber(cavoRimasto)}</strong>`;
