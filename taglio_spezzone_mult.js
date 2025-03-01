@@ -1,7 +1,6 @@
 const input1 = document.getElementById('input1');
 const input2 = document.getElementById('input2');
 const input3 = document.getElementById('input3');
-const radioButtons = document.querySelectorAll('input[name="direction"]');
 const calcolaButton = document.getElementById('calcola');
 const pulisciButton = document.getElementById('pulisci');
 
@@ -16,7 +15,7 @@ calcolaButton.addEventListener('click', () => {
     let num1 = parseFloat(input1.value.replace(/\./g, '')) || 0;
     let num2 = parseFloat(input2.value.replace(/\./g, '')) || 0;
     let num3 = parseFloat(input3.value.replace(/\./g, '')) || 0;
-
+    const direction = document.querySelector('input[name="direction"]:checked').value;
     if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
         alert("Inserisci solo valori numerici.");
         return;
@@ -24,16 +23,25 @@ calcolaButton.addEventListener('click', () => {
 
     // inserire algoritmo di calcolo
 	const cavoTagliato = num1*num2;
+	let mm_finale;
+
+    if (direction === 'sale') {
+        mm_finale = num3 + cavoTagliato;
+    } else {
+        mm_finale = num3 - cavoTagliato;
+    }
+	
 
     output1.innerHTML = `<strong>Totale lunghezza cavo m. ${formatNumber(cavoTagliato)}</strong>`;
-
+    output2.innerHTML =`<strong>Marca metrica finale: ${formatNumber(mm_finale)}</strong>`;
 });
 
 pulisciButton.addEventListener('click', () => {
     input1.value = '';
     input2.value = '';
     input3.value = '';
-    output1.innerHTML = 'Totale lunghezza cavo m. 0';
+    output1.innerHTML = '<strong>Totale lunghezza cavo m. 0</strong>';
+	output2.innerHTML = '<strong>Marca metrica finale: 0</strong>';
     input1.focus();
 });
 

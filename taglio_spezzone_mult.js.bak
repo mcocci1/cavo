@@ -25,7 +25,7 @@ calcolaButton.addEventListener('click', () => {
     // inserire algoritmo di calcolo
 	const cavoTagliato = num1*num2;
 
-    output1.textContent = `<strong>Totale lunghezza cavo m. ${formatNumber(cavoTagliato)}</strong>`;
+    output1.innerHTML = `<strong>Totale lunghezza cavo m. ${formatNumber(cavoTagliato)}</strong>`;
 
 });
 
@@ -33,7 +33,7 @@ pulisciButton.addEventListener('click', () => {
     input1.value = '';
     input2.value = '';
     input3.value = '';
-    output1.textContent = 'Totale lunghezza cavo m. 0';
+    output1.innerHTML = 'Totale lunghezza cavo m. 0';
     input1.focus();
 });
 

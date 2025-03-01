@@ -25,6 +25,7 @@
         </div>
         <button id="calcola">Calcola</button>
         <button id="pulisci">Pulisci</button>
+		<div id="output1"><strong>Totale lunghezza cavo m. 0</strong></div>
     </div>
     <script src="taglio_spezzone_mult.js"></script>
     <script src="menu.js"></script>
