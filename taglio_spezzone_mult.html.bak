@@ -16,9 +16,7 @@
     </div>
     <div class="container">
         <h1>CALCOLO TAGLI MULTIPLI</h1>
-        <input type="text" id="input1" placeholder="Numero spezzoni:" inputmode="numeric" pattern="[0-9]*">
-        <input type="text" id="input2" placeholder="Lunghezza spezzone:" inputmode="numeric" pattern="[0-9]*">
-        <input type="text" id="input3" placeholder="Marca metrica iniziale:" inputmode="numeric" pattern="[0-9]*">
+        <p>Contenuto della pagina in costruzione...</p>
     </div>
 
     <script src="menu.js"></script>
