@@ -40,7 +40,7 @@ calcolaButton.addEventListener('click', () => {
     output2.innerHTML =`<strong>Marca metrica finale: ${formatNumber(mm_finale)}</strong>`;
 	
 	    // Genera la tabella
-    let tabellaHTML = '<table><thead><tr><th>N. Spezzone</th><th>MM iniziale</th><th>MM finale</th></tr></thead><tbody>';
+    let tabellaHTML = '<table><thead><tr><th>N. Spezzone</th><th>Inizio</th><th>Fine</th></tr></thead><tbody>';
     let marcaIniziale = num3;
     for (let i = 1; i <= num1; i++) {
         let marcaFinale;
