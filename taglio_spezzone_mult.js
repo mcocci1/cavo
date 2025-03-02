@@ -5,6 +5,7 @@ const output1 = document.getElementById('output1');
 const output2 = document.getElementById('output2');
 const calcolaButton = document.getElementById('calcola');
 const pulisciButton = document.getElementById('pulisci');
+const tabellaRisultati = document.getElementById('tabella-risultati');
 
 // Imposta il focus sulla casella input1 all'apertura della pagina
 input1.focus();
@@ -37,6 +38,22 @@ calcolaButton.addEventListener('click', () => {
 
     output1.innerHTML = `<strong>Totale lunghezza cavo m. ${formatNumber(cavoTagliato)}</strong>`;
     output2.innerHTML =`<strong>Marca metrica finale: ${formatNumber(mm_finale)}</strong>`;
+	
+	    // Genera la tabella
+    let tabellaHTML = '<table><thead><tr><th>N. Spezzone</th><th>MM iniziale</th><th>MM finale</th></tr></thead><tbody>';
+    let marcaIniziale = num3;
+    for (let i = 1; i <= num1; i++) {
+        let marcaFinale;
+        if (direction === 'sale') {
+            marcaFinale = marcaIniziale + num2;
+        } else {
+            marcaFinale = marcaIniziale - num2;
+        }
+        tabellaHTML += `<tr><td>${i}</td><td>${formatNumber(marcaIniziale)}</td><td>${formatNumber(marcaFinale)}</td></tr>`;
+        marcaIniziale = marcaFinale;
+    }
+    tabellaHTML += '</tbody></table>';
+    tabellaRisultati.innerHTML = tabellaHTML;
 });
 
 pulisciButton.addEventListener('click', () => {
@@ -45,6 +62,7 @@ pulisciButton.addEventListener('click', () => {
     input3.value = '';
     output1.innerHTML = '<strong>Totale lunghezza cavo m. 0</strong>';
 	output2.innerHTML = '<strong>Marca metrica finale: 0</strong>';
+	tabellaRisultati.innerHTML = ''; // Pulisce la tabella
     input1.focus();
 });
 
