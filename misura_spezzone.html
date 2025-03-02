@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Misura spezzone</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+<div class="menu" id="menu">
+        <a href="index.html">Misura cavo in bobina</a>
+        <a href="taglio_spezzone_mult.html">Calcolo tagli multipli</a>
+		<a href="misura_spezzone.html">Misura spezzone</a>
+        <a href="under_construction.html">Pesi e misure</a>
+        <a href="under_construction.html">Bobina in base a cavo</a>
+</div>
+
+  <div class="container">
+    <h1>MISURA SPEZZONE</h1>
+    <input type="text" id="input1" placeholder="Marca metrica iniziale:" inputmode="numeric" pattern="[0-9]*">
+    <input type="text" id="input2" placeholder="Marca metrica finale:" inputmode="numeric" pattern="[0-9]*">
+    <div id="output2"><strong>Lunghezza spezzone m. 0</strong></div>
+    <button id="calcola">Calcola</button>
+    <button id="pulisci">Pulisci</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html>
