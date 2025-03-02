@@ -111,9 +111,13 @@ table {
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
-
+/* Stile per la riga tagliata */
+.tagliato {
+    text-decoration: line-through;
+    color: #888;
+}
 th {
     background-color: #f2f2f2;
 }

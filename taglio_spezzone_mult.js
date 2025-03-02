@@ -54,6 +54,11 @@ calcolaButton.addEventListener('click', () => {
     }
     tabellaHTML += '</tbody></table>';
     tabellaRisultati.innerHTML = tabellaHTML;
+	tabellaRisultati.querySelectorAll('tbody tr').forEach(row => {
+        row.addEventListener('click', () => {
+            row.classList.toggle('tagliato');
+        });
+    });
 });
 
 pulisciButton.addEventListener('click', () => {
