@@ -15,6 +15,12 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 input[type="text"] {
     width: calc(100% - 20px); /*Larghezza del 100% meno il padding*/
     padding: 10px;
@@ -52,4 +58,93 @@ button:hover {
 
 #output2 strong{
   color: #007bff;
+}
+
+/* Stili per i radio buttons */
+.radio-group {
+    margin-top: 10px;
+}
+
+.radio-group label {
+    margin-right: 10px;
+}
+
+/* Stili per il menu */
+.menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none; /* Nascondi il menu inizialmente */
+    z-index: 10;
+}
+
+.menu a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Stili per la tabella dei risultati */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+/* Stile per la riga tagliata */
+.tagliato {
+    text-decoration: line-through;
+    color: #888;
+}
+th {
+    background-color: #f2f2f2;
+}
+/* Stili per la pagina under_construction.html */
+body.under-construction {
+    background-color: #f9f9f9;
+}
+
+body.under-construction .container {
+    max-width: 400px;
+    padding: 30px;
+}
+
+body.under-construction h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+body.under-construction p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+body.under-construction a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
 }
