@@ -49,13 +49,6 @@ pulisciButton.addEventListener('click', () => {
 });
 
 
-radioButtons.forEach(radioButton => {
-    radioButton.addEventListener('change', () => {
-        // Esegui la logica di calcolo qui
-        console.log("Selezione cambiata:", document.querySelector('input[name="direction"]:checked').value);
-    });
-});
-
 input1.addEventListener('input', () => {
     let value = input1.value.replace(/\./g, '');
     if (!isNaN(parseFloat(value))) {
