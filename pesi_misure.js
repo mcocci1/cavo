@@ -50,15 +50,8 @@ cercaButton.addEventListener('click', () => {
                     <p><strong>Peso totale (kg): ${formatNumber(pesoTotale)}</strong></p>
                 `;
             } else {
-                risultatiDiv.innerHTML = '<p>Cavo non trovato: verrà aggiunto il prima possibile</p>';
-				// Aggiunto il codice interno al file codici_non_trovati.txt
-                fetch('codici_non_trovati.txt', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'text/plain'
-                    },
-                    body: codiceInterno + '\n'
-                }).catch(error => console.error('Errore durante la scrittura del file:', error));
+                risultatiDiv.innerHTML = '<p>Cavo non trovato</p>';
+
             }
         });
 });
