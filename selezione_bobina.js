@@ -91,7 +91,7 @@ cercaButton.addEventListener('click', () => {
                         }
                     });
             } else {
-                risultatiDiv.innerHTML = '<p>Cavo non trovato.</p>';
+                risultatiDiv.innerHTML = '<p>Cavo non trovato: verrà aggiunto il prima possibile</p>';
             }
         });
 });
