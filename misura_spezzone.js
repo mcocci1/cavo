@@ -11,6 +11,7 @@ function formatNumber(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
+
 calcolaButton.addEventListener('click', () => {
     let num1 = parseFloat(input1.value.replace(/\./g, '')) || 0;
     let num2 = parseFloat(input2.value.replace(/\./g, '')) || 0;
