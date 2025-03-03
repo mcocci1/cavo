@@ -39,7 +39,7 @@ cercaButton.addEventListener('click', () => {
             if (risultato) {
                 const peso1000m = parseFloat(risultato[4]);
                 const pesoMetro = peso1000m / 1000;
-                const pesoTotale = pesoMetro * lunghezza;
+                const pesoTotale = Math.round(pesoMetro * lunghezza);
 
                 risultatiDiv.innerHTML = `
                     <p>Cavo in: ${risultato[6]}</p>
