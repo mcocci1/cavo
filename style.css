@@ -75,7 +75,15 @@ button:hover {
 .radio-group label {
     margin-right: 10px;
 }
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+.radio-group span {
+    margin-right: 10px;
+}
 /* Stili per il menu */
 .menu-icon {
     position: absolute;

@@ -42,7 +42,7 @@ cercaButton.addEventListener('click', () => {
                 const pesoTotale = Math.round(pesoMetro * lunghezza);
 
                 risultatiDiv.innerHTML = `
-                    <p>Cavo in: ${risultato[6]}</p>
+                    <p>Formato: ${risultato[6]}</p>
                     <p>Marca: ${risultato[1]}</p>
                     <p>Articolo: ${risultato[2]}</p>
                     <p>Peso appr. (kg/1000m): ${formatNumber(peso1000m)}</p>

@@ -81,9 +81,9 @@ cercaButton.addEventListener('click', () => {
                                 <p>Articolo: ${risultatoCavo[2]}</p>
                                 <p>Peso (kg/1000m): ${formatNumber(peso1000m)}</p>
                                 <p><strong>Diametro (mm): ${risultatoCavo[3]}</strong></p>
-                                <p><strong>Peso totale cavo (kg): ${formatNumber(pesoCavoTotale)}</strong></p>
-                                <p>Bobina cosigliata diam.: ${bobinaSelezionata[0]}</p>
-                                <p>Peso bobina (kg): ${formatNumber(pesoBobina)}</p>
+                                <p><strong>Peso cavo (kg): ${formatNumber(pesoCavoTotale)}</strong></p>
+                                <p><strong>Bobina cosigliata diam.: ${bobinaSelezionata[0]}</strong></p>
+                                <p><strong>Peso bobina (kg): ${formatNumber(pesoBobina)}</strong></p>
                                 <p><strong>Peso totale (cavo + bobina): ${formatNumber(pesoTotale)}</strong></p>
                             `;
                         } else {
