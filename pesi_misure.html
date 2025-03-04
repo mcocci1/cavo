@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pesi e Misure</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="index.html">Calcolo cavo in bobina</a>
+        <a href="under_construction.html">Calcolo spezzone</a>
+        <a href="taglio_spezzone_mult.html">Calcolo tagli multipli</a>
+        <a href="pesi_misure.html">Pesi e misure</a>
+        <a href="selezione_bobina.html">Bobina in base a cavo</a>
+    </div>
+    <div class="container">
+        <h1>PESI E MISURE</h1>
+        <input type="text" id="input1" placeholder="Codice interno:" inputmode="numeric" pattern="[0-9]*">
+        <input type="text" id="input2" placeholder="Lunghezza (m):" inputmode="numeric" pattern="[0-9]*">
+        <button id="cerca">Cerca</button>
+        <div id="risultati"></div>
+    </div>
+    <script src="pesi_misure.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

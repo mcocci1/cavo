@@ -60,6 +60,13 @@ button:hover {
   color: #007bff;
 }
 
+#risultati {
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+#risultati p {
+    margin-bottom: 5px; /* Aggiunge un piccolo margine inferiore tra i paragrafi */
+}
 /* Stili per i radio buttons */
 .radio-group {
     margin-top: 10px;
@@ -68,7 +75,15 @@ button:hover {
 .radio-group label {
     margin-right: 10px;
 }
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+.radio-group span {
+    margin-right: 10px;
+}
 /* Stili per il menu */
 .menu-icon {
     position: absolute;
@@ -148,3 +163,4 @@ body.under-construction a {
     text-decoration: none;
     border-radius: 5px;
 }
+

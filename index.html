@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Calcolo Cavo</title>
+  <title>Calcolo Cavo in bobina</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -11,9 +11,9 @@
 <div class="menu" id="menu">
         <a href="index.html">Misura cavo in bobina</a>
         <a href="taglio_spezzone_mult.html">Calcolo tagli multipli</a>
-		<a href="under_construction.html">Misura spezzone</a>
-        <a href="under_construction.html">Pesi e misure</a>
-        <a href="under_construction.html">Bobina in base a cavo</a>
+		<a href="misura_spezzone.html">Misura spezzone</a>
+        <a href="pesi_misure.html">Pesi e misure</a>
+        <a href="selezione_bobina.html">Bobina in base a cavo</a>
 </div>
 
   <div class="container">
@@ -21,10 +21,10 @@
     <input type="text" id="input1" placeholder="Quantità iniziale:" inputmode="numeric" pattern="[0-9]*">
     <input type="text" id="input2" placeholder="Marca metrica iniziale:" inputmode="numeric" pattern="[0-9]*">
     <input type="text" id="input3" placeholder="Marca metrica sul cavo:" inputmode="numeric" pattern="[0-9]*">
-    <div id="output1">Cavo tagliato m. 0</div>
-    <div id="output2"><strong>Cavo rimasto m. 0</strong></div>
     <button id="calcola">Calcola</button>
     <button id="pulisci">Pulisci</button>
+	<div id="output1">Cavo tagliato m. 0</div>
+    <div id="output2"><strong>Cavo rimasto m. 0</strong></div>
   </div>
 
   <script src="script.js"></script>
