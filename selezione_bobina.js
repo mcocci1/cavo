@@ -3,6 +3,8 @@ const input2 = document.getElementById('input2');
 const cercaButton = document.getElementById('cerca');
 const risultatiDiv = document.getElementById('risultati');
 
+const K = 1.05; // Costante per il coefficiente di correzione (+5%)
+
 input2.addEventListener('input', () => {
     let value = input2.value.replace(/\./g, '');
     if (!isNaN(parseFloat(value))) {
@@ -48,8 +50,9 @@ cercaButton.addEventListener('click', () => {
                 const pesoMetro = peso1000m / 1000;
                 const pesoCavoTotale = Math.round(pesoMetro * lunghezza);
 
-                // Calcolo del volume con sezione quadrata (corretto)
-                const volumeCavo = (diametroCavo / 100) ** 2 * (lunghezza * 10); // Volume in dmc
+                 // Calcolo del volume con sezione quadrata (corretto)
+                const lunghezzaCorretta = lunghezza * K; // Aumenta la lunghezza utilizzando la costante K
+                const volumeCavo = (diametroCavo / 100) ** 2 * (lunghezzaCorretta * 10); // Volume in dmc
 
                 fetch(fileBobine)
                     .then(response => response.text())
