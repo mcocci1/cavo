@@ -3,7 +3,7 @@ const input2 = document.getElementById('input2');
 const cercaButton = document.getElementById('cerca');
 const risultatiDiv = document.getElementById('risultati');
 
-const K = 1.05; // Costante per il coefficiente di correzione (+5%)
+const K = 1.10; // Costante per il coefficiente di correzione (+10%)
 
 input2.addEventListener('input', () => {
     let value = input2.value.replace(/\./g, '');
