@@ -50,9 +50,10 @@ cercaButton.addEventListener('click', () => {
                 const pesoMetro = peso1000m / 1000;
                 const pesoCavoTotale = Math.round(pesoMetro * lunghezza);
 
-                 // Calcolo del volume con sezione quadrata (corretto)
+                // Calcolo del volume con sezione quadrata (corretto)
                 const lunghezzaCorretta = lunghezza * K; // Aumenta la lunghezza utilizzando la costante K
-                const volumeCavo = (diametroCavo / 100) ** 2 * (lunghezzaCorretta * 10); // Volume in dmc
+                const volumeCavo = (diametroCavo / 100) ** 2 * (lunghezza * 10); // Volume in dmc (senza K)
+                const volumeCavoConK = (diametroCavo / 100) ** 2 * (lunghezzaCorretta * 10); // Volume in dmc (con K)
 
                 fetch(fileBobine)
                     .then(response => response.text())
@@ -68,7 +69,7 @@ cercaButton.addEventListener('click', () => {
                             const diametroMinimo = parseFloat(colonneBobine[3]);
                             const diametroMassimo = parseFloat(colonneBobine[4]);
 
-                            if (diametroCavo >= diametroMinimo && diametroCavo <= diametroMassimo && volumeCavo <= capacitaMassima && pesoCavoTotale <= portataMassima) {
+                            if (diametroCavo >= diametroMinimo && diametroCavo <= diametroMassimo && volumeCavoConK <= capacitaMassima && pesoCavoTotale <= portataMassima) {
                                 bobinaSelezionata = colonneBobine;
                                 break;
                             }
@@ -77,6 +78,7 @@ cercaButton.addEventListener('click', () => {
                         if (bobinaSelezionata) {
                             const pesoBobina = parseInt(bobinaSelezionata[5]);
                             const pesoTotale = pesoCavoTotale + pesoBobina;
+                            const percentualeVolumeUtilizzato = (volumeCavo / parseInt(bobinaSelezionata[1])) * 100;
 
                             risultatiDiv.innerHTML = `
                                 <p>Formato: ${risultatoCavo[6]}</p>
@@ -86,8 +88,9 @@ cercaButton.addEventListener('click', () => {
                                 <p><strong>Diametro (mm): ${risultatoCavo[3]}</strong></p>
                                 <p><strong>Peso cavo (kg): ${formatNumber(pesoCavoTotale)}</strong></p>
                                 <p><strong>Bobina cosigliata diam.: ${bobinaSelezionata[0]}</strong></p>
+								<p><strong>Volume bobina utilizzato (%): ${percentualeVolumeUtilizzato.toFixed(2)}</strong></p>
                                 <p><strong>Peso bobina (kg): ${formatNumber(pesoBobina)}</strong></p>
-                                <p><strong>Peso totale (cavo + bobina): ${formatNumber(pesoTotale)}</strong></p>
+                                <p><strong>Peso totale (cavo + bobina) (kg): ${formatNumber(pesoTotale)}</strong></p>
                             `;
                         } else {
                             risultatiDiv.innerHTML = '<p>Nessuna bobina adatta trovata.</p>';
