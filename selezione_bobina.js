@@ -45,7 +45,7 @@ cercaButton.addEventListener('click', () => {
             const risultatoCavo = ricercaLineare(righeCavi, codiceInterno);
 
             if (risultatoCavo) {
-                const diametroCavo = parseFloat(risultatoCavo[3]);
+                const diametroCavo = parseFloat(risultatoCavo[3].replace(',', '.'));  // corretta formula perchè il csv contiene i decimali con la virgola
                 const peso1000m = parseFloat(risultatoCavo[4]);
                 const pesoMetro = peso1000m / 1000;
                 const pesoCavoTotale = Math.round(pesoMetro * lunghezza);
