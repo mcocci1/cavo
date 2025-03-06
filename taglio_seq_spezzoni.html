@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taglio Sequenza Spezzoni</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="index.html">Calcolo cavo in bobina</a>
+        <a href="taglio_spezzone_mult.html">Taglio spezzoni</a>
+        <a href="taglio_seq_spezzoni.html">Taglio sequenza spezzoni</a>
+        <a href="misura_spezzone.html">Misura spezzone</a>
+        <a href="pesi_misure.html">Pesi e misure</a>
+        <a href="selezione_bobina.html">Bobina in base a cavo</a>
+        
+    </div>
+    <div class="container">
+        <h1>TAGLIO SEQUENZA SPEZZONI</h1>
+
+        <div id="input-container">
+            <div class="sequenza">
+                <label>A)</label>
+                <input type="text" id="n_spezzoni_A" placeholder="n. spezzoni:" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" id="lungh_spezzone_A" placeholder="lungh. Spezzone:" inputmode="numeric" pattern="[0-9]*">
+            </div>
+            <div class="sequenza">
+                <label>B)</label>
+                <input type="text" id="n_spezzoni_B" placeholder="n. spezzoni:" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" id="lungh_spezzone_B" placeholder="lungh. Spezzone:" inputmode="numeric" pattern="[0-9]*">
+            </div>
+            <div class="sequenza">
+                <label>C)</label>
+                <input type="text" id="n_spezzoni_C" placeholder="n. spezzoni:" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" id="lungh_spezzone_C" placeholder="lungh. Spezzone:" inputmode="numeric" pattern="[0-9]*">
+            </div>
+            <div class="sequenza">
+                <label>D)</label>
+                <input type="text" id="n_spezzoni_D" placeholder="n. spezzoni:" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" id="lungh_spezzone_D" placeholder="lungh. Spezzone:" inputmode="numeric" pattern="[0-9]*">
+            </div>
+            <div class="sequenza">
+                <label>E)</label>
+                <input type="text" id="n_spezzoni_E" placeholder="n. spezzoni:" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" id="lungh_spezzone_E" placeholder="lungh. Spezzone:" inputmode="numeric" pattern="[0-9]*">
+            </div>
+
+            <div>
+                <input type="text" id="marca_metrica_iniziale" placeholder="Marca metrica iniziale:" inputmode="numeric" pattern="[0-9]*">
+            </div>
+            <div>
+                <input type="radio" id="sale" name="direzione" value="sale" checked>
+                <label for="sale">Sale</label>
+                <input type="radio" id="scende" name="direzione" value="scende">
+                <label for="scende">Scende</label>
+            </div>
+
+            <div>
+                <button id="calcola">Calcola</button>
+                <button id="pulisci">Pulisci</button>
+            </div>
+        </div>
+
+        <div id="output1"><strong>Totale lunghezza cavo m. 0</strong></div>
+        <div id="output2"><strong>Totale spezzoni: 0</strong></div>
+        <div id="output3"><strong>Marca metrica finale: 0</strong></div>
+
+        <div id="tabella-risultati"></div>
+    </div>
+
+    <script src="taglio_seq_spezzoni.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

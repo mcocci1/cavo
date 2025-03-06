@@ -7,7 +7,7 @@ body {
 .container {
     width: 90%; /*La larghezza è relativa al 90% dello schermo*/
     max-width: 300px; /*massimo 300px di larghezza per schermi grandi*/
-    margin: 20px auto;
+    margin: 10px auto;
     text-align: center;
     background-color: #fff;
     padding: 20px;
@@ -16,9 +16,22 @@ body {
 }
 
 .container h1 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 20px;
     text-align: center;
+}
+.sequenza {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sequenza label {
+    margin-right: 5px;
+}
+
+.sequenza input[type="text"] {
+    margin-right: 10px;
 }
 
 input[type="text"] {
@@ -118,15 +131,24 @@ button:hover {
 
 /* Stili per la tabella dei risultati */
 table {
-    width: 100%;
+    width: 98%; /* Leggermente meno del 100% per lasciare un po' di margine */
     border-collapse: collapse;
-    margin-top: 20px;
+    margin: 20px auto; /* Centra la tabella orizzontalmente */
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #e0e0e0; /* Bordo più chiaro */
+    padding: 8px; /* ridotta spaziatura nelle celle */
     text-align: center;
+}
+
+th {
+    font-weight: bold; /* Testo in grassetto per l'intestazione */
+    background-color: #f0f0f0; /* Sfondo leggermente diverso per l'intestazione */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Sfondo alternato per le righe */
 }
 /* Stile per la riga tagliata */
 .tagliato {
