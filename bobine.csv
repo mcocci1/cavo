@@ -1,7 +1,7 @@
 diametro;capacita_massima;portata_massima;diametro_minimo;diametro_massimo;peso
 60;96;250;3;20;17
 70;125;400;3;20;22
-80;177;600;3;20;28
+80;177;600;3;30;28
 90;224;900;3;40;43
 100;342;1300;3;40;54
 120;577;1700;5;45;100
