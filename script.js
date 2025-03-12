@@ -6,16 +6,6 @@ const output2 = document.getElementById('output2');
 const calcolaButton = document.getElementById('calcola');
 const pulisciButton = document.getElementById('pulisci');
 
-// Blocca la rotazione in modalità verticale
-if (screen.orientation && screen.orientation.lock) {
-    screen.orientation.lock('portrait-primary');
-  }
-  
-  // Richiedi la modalità a schermo intero
-  if (document.documentElement.requestFullscreen) {
-    document.documentElement.requestFullscreen();
-  } 
-
 // Imposta il focus sulla casella input1 all'apertura della pagina
 input1.focus();
 
