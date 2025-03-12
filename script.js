@@ -6,6 +6,22 @@ const output2 = document.getElementById('output2');
 const calcolaButton = document.getElementById('calcola');
 const pulisciButton = document.getElementById('pulisci');
 
+// Blocca la rotazione in modalità verticale
+if (screen.orientation && screen.orientation.lock) {
+    screen.orientation.lock('portrait-primary');
+  }
+  
+  // Richiedi la modalità a schermo intero
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+    document.documentElement.mozRequestFullScreen();
+  } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari e Opera
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+    document.documentElement.msRequestFullscreen();
+  }
+
 // Imposta il focus sulla casella input1 all'apertura della pagina
 input1.focus();
 
